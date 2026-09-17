@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    margin: 0;
+}
+
+h1 {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#busqueda {
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+form {
+    background: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 13px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+#listaProductos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.producto {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #ccc;
+}
+
+.producto h3 {
+    font-size: 22px;
+}
+
+.producto p {
+    color: #555;
+}

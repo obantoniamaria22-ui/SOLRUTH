@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eeeeee;
+    margin: 0;
+}
+
+h1 {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    background: white;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
+
+#listaInventario {
+    max-width: 700px;
+    margin: auto;
+}
+
+.producto {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 6px solid #111;
+}
