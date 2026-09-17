@@ -1,66 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLRUTH</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <title>SOLRUTH </title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
+
     <header>
-        <h1>Gestión de Inventario y Ventas</h1>
+        <h1>SOLRUTH</h1>
+
         <nav>
-            <button onclick="mostrarSeccion('inventario')">Inventario</button>
-            <button onclick="mostrarSeccion('catalogo')">catalogo / Venta</button>
+            <a href="index.html">Inicio</a>
+            <a href="cliente.html">Clientes</a>
+            <a href="categorias.html">Categorías</a>
+            <a href="productos.html">Productos</a>
+            <a href="inventario.html">Inventario</a>
+            <a href="pedidos.html">Pedidos</a>
         </nav>
     </header>
 
-    <main>
+    <main class="inicio">
 
-        <section id="seccion-inventario" class="seccion">
-            <h2>Agregar Nuevo Producto</h2>
-            <form id="form-producto">
-                <input type="text" id="nombre" placeholder="Nombre de la prenda" required>
-                <input type="number" id="precio" placeholder="Precio ($)" required>
-                <input type="number" id="stock" placeholder="Cantidad en stock" required>
-                <button type="submit">Guardar Producto</button>
-            </form>
+        <h2>Ropa deportiva para todos tus entrenamientos</h2>
 
-            <h2>Listado de Productos</h2>
-            <table id="tabla-inventario">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Stock</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
+        <p>
+            Encuentra ropa cómoda, moderna y perfecta para hacer ejercicio.
+        </p>
 
-                </tbody>
-            </table>
-        </section>
+        <button onclick="irAProductos()">
+            Ver productos
+        </button>
 
+        <div class="busqueda">
+            <h3>¿Qué estás buscando?</h3>
 
-        <section id="seccion-catalogo" class="seccion oculto">
-            <h2>Catálogo de Ropa</h2>
-            <div id="grid-catalogo" class="grid-productos">
-                <!-- Las tarjetas de productos se cargan con JS -->
-            </div>
+            <input type="text" id="buscar" placeholder="Buscar producto...">
 
-            <div class="carrito-resumen">
-                <h3>Carrito de Compras</h3>
-                <ul id="lista-carrito">
-                    <li>El carrito está vacío</li>
-                </ul>
-                <p>Total: $<span id="total-carrito">0</span></p>
-                <button onclick="finalizarCompra()">Finalizar Compra</button>
-            </div>
-        </section>
+            <button onclick="buscarProducto()">
+                Buscar
+            </button>
+        </div>
+
     </main>
 
-    <script src="script.js"></script>
+    <script src="js/inicio.js"></script>
+
 </body>
+
 </html>
