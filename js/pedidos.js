@@ -15,7 +15,12 @@ document.getElementById("formPedido").addEventListener("submit", function(event)
     };
 
     pedidos.push(pedido);
-
+    Swal.fire({
+        title: "¡Pedido guardado!",
+        text: "El pedido se registró correctamente.",
+        icon: "success",
+        confirmButtonText: "Guardar pedido"
+    });
     mostrarPedidos();
 
     this.reset();

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOLRUTH </title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
@@ -14,9 +14,8 @@
         <h1>SOLRUTH</h1>
 
         <nav>
-            <a href="index.html">Inicio</a>
             <a href="cliente.html">Clientes</a>
-            <a href="categorias.html">Categorías</a>
+            <a href="categoria.html">Categorías</a>
             <a href="productos.html">Productos</a>
             <a href="inventario.html">Inventario</a>
             <a href="pedidos.html">Pedidos</a>
@@ -25,29 +24,20 @@
 
     <main class="inicio">
 
-        <h2>Ropa deportiva para todos tus entrenamientos</h2>
 
-        <p>
-            Encuentra ropa cómoda, moderna y perfecta para hacer ejercicio.
-        </p>
+        <section class="portada">
+            <div class="portada-contenido">
+                <a href="./menu.html" class="btn-portada">Ver productos</a>
+            </div>
+        </section>
 
-        <button onclick="irAProductos()">
-            Ver productos
-        </button>
-
-        <div class="busqueda">
-            <h3>¿Qué estás buscando?</h3>
-
-            <input type="text" id="buscar" placeholder="Buscar producto...">
-
-            <button onclick="buscarProducto()">
-                Buscar
-            </button>
         </div>
 
     </main>
 
-    <script src="js/inicio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/busqueda.js"></script>
+    <script src="../js/index.js"></script>
 
 </body>
 

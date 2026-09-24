@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú de Ropa - SOLRUTH</title>
+  <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+
+  
+  <header class="header">
+    <div class="logo">SOLRUTH</div>
+    <div class="header-icons">
+      <button id="btnCarrito">🛒 Carrito (0)</button>
+    </div>
+  </header>
+
+ 
+  <nav class="menu-categorias"></nav>
+
+ 
+  <div class="buscador">
+    <input type="text" id="inputBuscar" placeholder="Buscar prendas...">
+    <button id="btnBuscar">🔍</button>
+  </div>
+
+  <h2 id="tituloCategoria" class="titulo-categoria">Todos los productos</h2>
+
+
+  <section>
+    <div class="productos-grid" id="productos-grid"></div>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/menu.js"></script>
+
+
+
+<div class="carrito-overlay" id="carritoOverlay">
+  <div class="carrito-panel">
+    <div class="carrito-header">
+      <h2>🛒 Tu carrito</h2>
+      <button class="cerrar-carrito" onclick="cerrarCarrito()">✕</button>
+    </div>
+
+    <div id="carrito-items" class="carrito-items">
+      
+    </div>
+
+    <div class="carrito-footer">
+      <p class="carrito-total" id="carrito-total">Total: $0</p>
+      <button class="btn-pagar" onclick="pagar()">💳 Pagar ahora</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

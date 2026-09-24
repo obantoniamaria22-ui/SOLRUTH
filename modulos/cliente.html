@@ -1,65 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Clientes-SOLRUTH</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../css/clientes.css">
+
 </head>
 
 <body>
 
-<header>
-    <h1>SOLRUTH</h1>
-</header>
+    <header>
+        <h1>SOLRUTH</h1>
+    </header>
 
-<main>
+    <main>
 
-    <h2>Registro de Cliente</h2>
+        <h2>Registro de Cliente</h2>
 
-    <form id="formCliente">
+        <form id="formCliente">
 
+            <label>ID Usuario</label>
+            <input type="number" id="idUsuario" required>
         <label>ID Usuario</label>
         <input type="number" id="id_usuario" required>
 
-        <label>Nombre</label>
-        <input type="text" id="nombre" required>
+            <label>Nombre</label>
+            <input type="text" id="nombre" required>
 
-        <label>Correo electrónico</label>
-        <input type="email" id="correo" required>
+            <label>Correo electrónico</label>
+            <input type="email" id="correo" required>
 
-        <label>Contraseña</label>
-        <input type="password" id="contrasena" required>
+            <label>Contraseña</label>
+            <input type="password" id="contrasena" required>
 
-        <label>Fecha de registro</label>
-        <input type="date" id="fecha_registro" required>
+            <label>Fecha de registro</label>
+            <input type="date" id="fechaRegistro" required>
 
-        <button type="submit">
-            Registrarse
-        </button>
+            <button type="submit">
+                Registrarse
+            </button>
 
-    </form>
+        </form>
 
-    <hr>
+        <hr>
 
-    <h2>Iniciar sesión</h2>
+        <h2>Iniciar sesión</h2>
 
-    <form id="formLogin">
+        <form id="formLogin">
 
-        <label>Correo electrónico</label>
-        <input type="email" id="loginCorreo" required>
+            <label>Correo electrónico</label>
+            <input type="email" id="loginCorreo" required>
 
-        <label>Contraseña</label>
-        <input type="password" id="loginContrasena" required>
+            <label>Contraseña</label>
+            <input type="password" id="loginContrasena" required>
 
-        <button type="submit">
-            Iniciar sesión
-        </button>
+            <button type="submit">
+                Iniciar sesión
+            </button>
 
-    </form>
+        </form>
 
-</main>
+    </main>
 
-<script src="js/cliente.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/clientes.js"></script>
 
 </body>
+
 </html>
