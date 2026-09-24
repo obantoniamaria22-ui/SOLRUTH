@@ -1,6 +1,25 @@
 let productos = [];
 
-document.getElementById("formProducto").addEventListener("submit", function(event) {
+function getProductosFiltrados(texto = "") {
+    const valor = texto.toLowerCase().trim();
+
+    if (!valor) {
+        return productos;
+    }
+
+    return productos.filter(function (producto) {
+        return (producto.nombre || "").toLowerCase().includes(valor) ||
+               (producto.descripcion || "").toLowerCase().includes(valor);
+    });
+}
+
+function buscar() {
+    const input = document.getElementById("busqueda");
+    const texto = input ? input.value : "";
+    mostrarProductos(getProductosFiltrados(texto));
+}
+
+document.getElementById("formProducto").addEventListener("submit", function (event) {
 
     event.preventDefault();
 
@@ -15,22 +34,30 @@ document.getElementById("formProducto").addEventListener("submit", function(even
     };
 
     productos.push(producto);
+    document.getElementById("formProducto").reset();
+    Swal.fire({
+        title: "¡Pedido guardado!",
+        text: "El pedido se registró correctamente.",
+        icon: "success",
+        confirmButtonText: "Guardar pedido"
+    });
 
-    mostrarProductos();
+    mostrarProductos(getProductosFiltrados(document.getElementById("busqueda")?.value || ""));
 
     this.reset();
 
 });
 
-function mostrarProductos() {
+function mostrarProductos(lista = productos) {
 
-    let lista = document.getElementById("listaProductos");
+    let listaProductos = document.getElementById("listaProductos");
+    if (!listaProductos) return;
 
-    lista.innerHTML = "";
+    listaProductos.innerHTML = "";
 
-    productos.forEach(function(producto) {
+    lista.forEach(function (producto) {
 
-        lista.innerHTML += `
+        listaProductos.innerHTML += `
             <div class="producto">
 
                 <h3 class="nombre">
@@ -48,4 +75,16 @@ function mostrarProductos() {
 
     });
 
+}
+
+const params = new URLSearchParams(window.location.search);
+const textoInicial = params.get("buscar") || "";
+
+if (document.getElementById("busqueda")) {
+    document.getElementById("busqueda").value = textoInicial;
+    mostrarProductos(getProductosFiltrados(textoInicial));
+
+    document.getElementById("busqueda").addEventListener("input", function () {
+        mostrarProductos(getProductosFiltrados(this.value));
+    });
 }
