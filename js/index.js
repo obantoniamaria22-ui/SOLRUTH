@@ -41,7 +41,7 @@ if (inputBuscar) {
     let texto = this.value.toLowerCase();
     let tarjetas = document.querySelectorAll(".producto-card");
 
-    tarjetas.forEach(function(card) {
+    tarjetas.forEach(function(card) { 
       let nombre = card.querySelector("h3").textContent.toLowerCase();
       card.style.display = nombre.includes(texto) ? "block" : "none";
     });
